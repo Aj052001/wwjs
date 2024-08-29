@@ -1,13 +1,8 @@
-const puppeteer = require('puppeteer-core');
+// const puppeteer = require('puppeteer-core');
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
-// Initialize Puppeteer and launch the browser
-(async () => {
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
-
+// Initialize Puppeteer and launch the browser/
   // Create a new client instance and pass the browser instance
   const client = new Client({
     puppeteer: { 
