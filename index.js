@@ -4,11 +4,7 @@ const qrcode = require('qrcode-terminal');
 
 // Initialize Puppeteer and launch the browser/
   // Create a new client instance and pass the browser instance
-  const client = new Client({
-    puppeteer: { 
-      browser: browser // Use the Puppeteer instance
-    }
-  });
+  const client = new Client();
 
   client.on('ready', () => {
     console.log('Client is ready!');
@@ -31,5 +27,5 @@ const qrcode = require('qrcode-terminal');
   });
 
   // Initialize the WhatsApp client
-  await client.initialize();
-})();
+  client.initialize();
+
